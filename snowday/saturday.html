@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+
+    <style name="impostor_size">
+        .marker + li { border-top-width:0px; }
+    </style>
+
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" media="screen" href="css/main.css" />
+
+</head>
+<body>
+    <div id="container">
+        <ul id="holder">
+            <li>Brunch!</li>
+            <li>Romance walk around the neighborhood, play in the snow</li>
+            <li>Kitchen time! Drink hot cocoa and put stock on</li>
+            <li>Tidypalooza! Clean, do kitchen/freezer inventory, put away wedding presents, get rid of clothes.</li>
+            <li>Watch rom coms and do shutterfly albums</li>
+            <li>Cook dinner! Delicious soup??</li>
+            <li>Board games!</li>
+            <li>Mozart in the Jungle and chill</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        var stylesheet = $('style[name=impostor_size]')[0].sheet,
+            rule = stylesheet.rules ? stylesheet.rules[0].style : stylesheet.cssRules[0].style,
+            setPadding = function(atHeight) {
+                rule.cssText = 'border-top-width: '+atHeight+'px'; 
+            };
+        $('ul').sortable({
+            'placeholder':'marker',
+            'start':function(ev, ui) {
+                setPadding(ui.item.height());
+            },
+            'stop':function(ev, ui) {
+                var next = ui.item.next();
+                next.css({'-moz-transition':'none', '-webkit-transition':'none', 'transition':'none'});
+                setTimeout(next.css.bind(next, {'-moz-transition':'border-top-width 0.1s ease-in', '-webkit-transition':'border-top-width 0.1s ease-in', 'transition':'border-top-width 0.1s ease-in'}));
+            }
+        });
+    </script>
+</body>
+</html>
