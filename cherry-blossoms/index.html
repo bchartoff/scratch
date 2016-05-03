@@ -1,0 +1,89 @@
+<!-- In your HTML head -->
+<html>
+<head>
+<link type="text/css" rel="stylesheet" media="screen" href="/css/jquery-sakura.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style>
+body{
+	height: 2000px;
+}
+a{
+	text-decoration: none;
+    color: #1696d2;
+    font-weight: 600;
+}
+h1{
+	font-family: Lato;
+    margin: 0 auto;
+    width: 331px;
+    font-size: 39px;
+    margin-top: 40px;
+}
+h2{
+	width: 167px;
+    margin: 0 auto;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 3px;
+    font-weight: 500;
+    padding-bottom: 17px;
+}
+p{  
+	text-indent: 40px;
+	font-family: Lato;
+    font-size: 13pt;
+    line-height: 48px;
+    width: 50%;
+    min-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+@media(max-width: 400px){
+	p{
+		width: 95%;
+		min-width: 0;
+	}
+}
+img{
+    width: 450px;
+    margin: 0 auto;
+    display: block;
+    /*padding-top: 20px;*/
+    padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<div>
+<p>
+For weeks and weeks, we studied the cherry blossoms. We looked at video feeds online, obsessed over weather forecasts, and learned all about cherry blossom florets, puffy white blooms, and peduncle elongation. When we were a day away from peak bloom, Natalie drove down to Union. She picked up Grandma and Pojka, then the next morning drove back to DC (with a stop at Nanny's for breakfast). We all met up in DC for hamburgers. We sat outside&mdash;it was the most beautiful day of the year, and we basked in sunshine and anticipation. Once Pojka had gobbled down the last half a burger, we put Grandma in her chair and made our way to the tidal basin.
+</p>
+<p>We walked past the State Department, past saucer magnolias (or tulip trees, as we call them) and scattered cherry trees, past the Lincoln Memorial and the reflecting pool, past the Korean War memorial (statues of soldiers and the carved granite wall), and down through falling petals to the tidal basin. We stopped at the water. Speechless, all we could do was look.
+</p>
+<p>
+There were blossoms everywhere. White and pink, drifting off the branches and floating on the water, some still tightly bunched up, showing a blush of pink on the bottom of their petals; some burst off the branch&mdash;white and shining stars. We stared at the Jefferson Memorial across the way and the trees all around the tidal basin, stretching their limbs out over the water. We were moved, beauty beyond words. There might have been a tear or two in Grandma's eye.</p>
+<p>Next, we strolled along the path, watching children play in the grass, sharing our joy and wonder with strangers walking past, showering in falling petals. Pojka didn't seem to have strong feelings about the cherry trees, but he did get pretty excited about some ducks who were swimming nearby. We had to hold on hard to keep him from jumping in the water.
+</p>
+<p>We made our way back through the FDR memorial, an open space lined with gorgeous trees and statues. We floated back to the car, back to our apartment. Pojka napped, Grandma and Ben ate a little bit of chili, and before long we had all drifted off into pink and white dreams
+</p>
+<p>The drive back to Union was more fun than usual, with Grandma and Pojka to keep us company. As always, our weekend was too short, but as always it was wonderful. On Saturday, we watched March Madness basketball during the day and spent the evening sitting out on the lawn as the sun set over the valley, grilling hotdogs on the bonfire, with coleslaw and beans and iced tea to wash it all down. It was Easter eve, so we watched Fred and Judy sing and dance across the screen in <em>Easter Parade</em>. Sunday was Easter, and after church we had Ba over for supper. Roast pork tenderloin and scalloped potatoes and Ba's sour cherry pie. It's always sad to leave the Farm, but we left with promises to come back soon, with memories of shimmering water and sundrenched blossoms, and with our hearts filled to the brim with love.
+</p>
+</div>
+
+<!-- End of your HTML body -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-sakura.min.js"></script>
+<script>
+    // domReady
+    $(function() {
+        $('body').sakura();
+    });
+
+    // windowLoad
+    $(window).load(function() {
+        $('body').sakura();
+    });
+</script>
+</body>
+</html>
